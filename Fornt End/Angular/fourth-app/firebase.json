@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "tabu2625",
+    "public": "dist/fourth-app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

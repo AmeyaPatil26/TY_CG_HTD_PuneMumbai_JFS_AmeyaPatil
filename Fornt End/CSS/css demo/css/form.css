@@ -1,0 +1,43 @@
+form{
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 300px;
+    height: 200px;
+    margin-left: 300px;
+    margin-top: 200px;
+    margin-left: 451px;
+    text-align: center;
+    background-image: url("/image/giphy.gif");
+    font-size: 20px;
+    color:brown;
+    box-shadow: 0 0 20px blue;
+    font-family: monospace;
+    
+}
+input[type="text"],input[type="password"]{
+width: 200px;
+height: 20px;
+border:1px solid black;
+border-radius: 50px;
+margin: 10px;
+outline: none;
+text-align: center;
+}
+input[type="submit"]
+{
+    border:1px solid black;
+    padding: 5px 20px;
+    border-radius: 25px;
+    outline: none;
+    
+}
+input[type="submit"]:hover
+{
+    background-color: palevioletred;
+    cursor: pointer;
+}
+body{
+    background-image: url("/image/night-4553325__340.jpg");
+ 
+    background-size: cover;
+}

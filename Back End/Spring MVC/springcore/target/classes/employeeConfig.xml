@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.capgemini.springcore.beans.EmployeeBean" autowire="byType" >
+	<!-- for byType class name should be taken to get values from department    -->
+	 <property name="empId" value="101"></property>
+	 <property name="empName" value="Yashaswi"></property>
+	 
+	<!-- <property name="deptBean" ref="department"></property> -->
+	 <!-- ref is bean of department. the id given for department take as ref here to join  -->
+	</bean>
+	
+	
+	<!--only one primary can given, if not any one as primary or cadidate it shows error -->
+	<bean id="dev" class="com.capgemini.springcore.beans.DepartmentBean" primary="true">
+	<property name="deptId" value="901"/>
+	<property name="deptName" value="Dev"/>
+	</bean>
+	
+	<bean id="test" class="com.capgemini.springcore.beans.DepartmentBean" autowire-candidate="false">
+	<property name="deptId" value="901"/>
+	<property name="deptName" value="test"/></bean>
+	
+	<!-- when we write autowire-candidate false it will not take   -->
+	<bean id="hr" class="com.capgemini.springcore.beans.DepartmentBean" autowire-candidate="false">
+	<property name="deptId" value="901"/>
+	<property name="deptName" value="hr"/>
+	</bean>
+	
+	
+</beans>

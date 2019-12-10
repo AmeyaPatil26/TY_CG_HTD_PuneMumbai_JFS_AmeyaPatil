@@ -1,0 +1,8 @@
+<div class="col-md-3 float-left force-overflow card card-body">
+        <div class="card card-body" *ngFor='let laptop of laptops'>
+            <img [src]="laptop.imgURL" class="card-img-top"
+            (click)='selectLaptop(laptop)' alt="">
+           <h4><p class="text-center">{{laptop.brand}}</p></h4> 
+        </div>
+    </div>
+    <app-laptop-details [laptop]='selectedLaptop'></app-laptop-details>

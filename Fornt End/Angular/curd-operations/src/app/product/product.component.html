@@ -1,0 +1,10 @@
+<div class="col-md-4 offset-md-4 ">
+        <input type="search" name="search" [(ngModel)]='search'
+        placeholder="Enter name of employee..." class="form-control">
+    </div>
+    <div class="card-body float-left "width = "20px" *ngFor='let product of productService.product  | filter: search '>
+        <img [src] ="product.imgUrl" class="card-img-top" width="20px" height="200px">
+        <h4 class="text-center">{{product.name}}</h4>
+        <p>{{product.price}}</p>
+        <p>{{product.info}}</p>
+    </div>

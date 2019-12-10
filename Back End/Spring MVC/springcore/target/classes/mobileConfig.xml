@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- ByName -->
+	<!-- <bean id="mobile" class="com.capgemini.springcore.beans.MobileBean" autowire="byType" >
+	for byType class name should be taken to get values from department   
+	 <property name="brandName" value="Mi"></property>
+	 <property name="modelName" value="redmi"></property>
+	 <property name="price" value="17532"></property>
+	 
+	<bean id="mob" class="com.capgemini.springcore.beans.MobileDisplayBean">
+	<property name="displaySize" value="5.1"></property>
+	<property name="resolution" value="1280"></property>	
+	</bean> -->
+	
+	
+	<!-- ByName  -->
+	<bean id="mobile" class="com.capgemini.springcore.beans.MobileBean" autowire="byName" >
+	<!-- for byType class name should be taken to get values from department    -->
+	 <property name="brandName" value="Mi"></property>
+	 <property name="modelName" value="redmi"></property>
+	 <property name="price" value="17532"></property>
+	 <property name="mobileDisplay" ref="mobDis"></property>
+	 </bean>
+	 
+	<bean id="mobDis" class="com.capgemini.springcore.beans.MobileDisplayBean">
+	<property name="displaySize" value="5.1"></property>
+	<property name="resolution" value="1280"></property>	
+	</bean>
+</beans>
